@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>History Buffs R Us</title>
+    <style>
+      body { background-color: #ced2e9 }
+      #wrapper {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5%;
+      }
+      .seperation{
+        background-color: #e0e4f7;
+        border: 1px solid black; 
+        margin-bottom: 2px;
+      }
+      #articles {
+        display: inline-block;
+        overflow: auto;
+        width: 80%;
+        height: 700px;
+      }
+      #notes {
+        float: right;
+        width: 30%;
+      }
+      textarea, input {
+        display: block;
+        width: 100%;
+        background-color: #FCF5C7;
+      }
+      input {
+        height: 36px;
+        font-size: 24px;
+      }
+      textarea {
+        height: 200px;
+        font-size: 18px;
+      }
+      .intro{
+        border: .5px solid black;
+        margin-bottom: 2px;
+      }
+      .button,.hatesbuttons{
+        position: relative;
+        float: right;
+        left: -5%;
+        border: 2px solid grey;
+        color: black;
+        background-color: #FCF5C7;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Ask Historians front page scrapper</h1>
+      <div class="intro"> 
+      <p>I'm a low key history nerd. Learning about what the world has been can help provide insight in to what it will be and how things got to the way they are now. Below are a list of threads scraped from Ask Historians, there people pose questions and people with certified credentials will do their best to answer the questions. Comments based on speculation or without sources are often deleted leaving reliable information in its stead. Please note that not all questions will be answered due to the strictness of the requirements for an answer. </p>
+      <button id="scrape">Scrape away captian </button> <button id="viewsaved">View saved Threads</button> <button><a href="/">View all Threads</a>  </button>
+    </div>
+      <div id="articles"></div>
+      <div id="notes"></div>
+    </div>
+    <p> BLATANT SHILLING BELOW</p>
+    <p> History buffs is a youtube channel that covers the historical accuracy of a movie or series. It can provide a very interesting look into the source material.</p>
+    <iframe width="600" height="480" src="https://www.youtube.com/embed/fDTmgHCVWgg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe width="600" height="480" src="https://www.youtube.com/embed/uxv3s7xTYHU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <iframe width="600" height="480" src="https://www.youtube.com/embed/HXZt-IlClhs" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
