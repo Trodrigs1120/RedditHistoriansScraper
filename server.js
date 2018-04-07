@@ -34,7 +34,7 @@ app.get("/saved", function(req, res) {
   });
 });
 
-app.get("/find/test", function(req, res) {
+app.get("/delete/:id", function(req, res) {
   // When searching by an id, the id needs to be passed in
   // as (mongojs.ObjectId(IDYOUWANTTOFIND))
 
@@ -42,7 +42,7 @@ app.get("/find/test", function(req, res) {
   db.scrapedData.findOne(
     {
       // Using the id in the url
-      _id: mongojs.ObjectId("5ac653f04f95162b4072cfc6")
+      _id: mongojs.ObjectId(req.params.id)
     },
     function(error, found) {
       // log any errors
@@ -55,6 +55,10 @@ app.get("/find/test", function(req, res) {
         // This will fire off the success function of the ajax request
         console.log(found);
         res.send(found);
+        db.saved.remove( {
+          // Using the id in the url
+          _id: mongojs.ObjectId(req.params.id)
+        }, )
       }
     }
   );

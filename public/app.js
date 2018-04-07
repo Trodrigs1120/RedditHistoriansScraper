@@ -18,6 +18,17 @@ $.ajax({
      console.log(data);
 })
 })
+$(document).on("click", ".hatesbuttons", function() {
+  var thisId = $(this).attr("data-id");
+  console.log(thisId)
+  $.ajax({
+    method: "GET",
+    url: "/delete/"+ thisId
+  })
+  .then(function(data) {
+       console.log(data);
+  })
+  })
 $(document).on("click", "#viewsaved", function() {
   $.getJSON("/saved", function(data) {
     // For each one
